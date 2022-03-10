@@ -1,6 +1,6 @@
 from django.db import models
 from django import forms
-from myApp.enums import Gender, Grade, Term, EmploymentStatus
+from App.enums import Gender, Grade, Term, EmploymentStatus
 from django.utils import timezone
 
 
