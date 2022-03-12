@@ -12,10 +12,10 @@ class Student(models.Model):
     username = models.CharField(max_length=128, unique=True)
     password = forms.CharField(widget=forms.PasswordInput)
     email = models.EmailField()
-    Gender = models.CharField(max_length=1, choices=Gender.choices, default=Gender.PREFER_NOT_TO_RESPOND)
+    gender = models.CharField(max_length=1, choices=Gender.choices, default=Gender.PREFER_NOT_TO_RESPOND)
     national_code = models.CharField(max_length=10, unique=True)
     birthdate = models.DateField()
-    Address = models.ForeignKey(Address, on_delete=models.SET_NULL)
+    address = models.ForeignKey(Address, on_delete=models.SET_NULL)
 
 
 class StudentCourse(models.Model):
