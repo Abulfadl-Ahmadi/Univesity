@@ -9,3 +9,9 @@ class Gender(models.TextChoices):
     PREFER_NOT_TO_RESPOND = 'P', 'Prefer not to respond'
 
 
+class DegreeLevel(models.TextChoices):
+    BACHELOR = 'B', "Bachelor's Degree"
+    MASTER = 'M', "master's Degree"
+    DOCTORATE = 'D', "Doctorate"
+
+
