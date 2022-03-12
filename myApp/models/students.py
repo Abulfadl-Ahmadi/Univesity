@@ -17,4 +17,4 @@ class Student(models.Model):
 class StudentCourse(models.Model):
     student = models.ForeignKey(Student, on_delete=models.PROTECT)
     course = models.ForeignKey(Course, on_delete=models.PROTECT)
-    master = models.ForeignKey(Master, on_delete=models.SET_NULL())
+    master = models.ForeignKey(Master, on_delete=models.SET_NULL)
