@@ -6,6 +6,7 @@ from myApp.enums import Gender
 from addresses import Address
 from phonenumber_field.modelfields import PhoneNumberField
 from sections import Section
+from degrees import DegreeLevel
 
 
 class Student(models.Model):
@@ -20,6 +21,7 @@ class Student(models.Model):
     birthdate = models.DateField()
     address = models.ForeignKey(Address, on_delete=models.SET_NULL)
     section = models.ForeignKey(Section, on_delete=models.SET_NULL)
+    degree = models.ForeignKey(DegreeLevel, on_delete=models.PROTECT)
 
 
 class StudentCourse(models.Model):
