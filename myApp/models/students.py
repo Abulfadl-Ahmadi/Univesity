@@ -5,6 +5,7 @@ from masters import Master
 from myApp.enums import Gender
 from addresses import Address
 from phonenumber_field.modelfields import PhoneNumberField
+from sections import Section
 
 
 class Student(models.Model):
@@ -18,6 +19,7 @@ class Student(models.Model):
     national_code = models.CharField(max_length=10, unique=True)
     birthdate = models.DateField()
     address = models.ForeignKey(Address, on_delete=models.SET_NULL)
+    section = models.ForeignKey(Section, on_delete=models.SET_NULL)
 
 
 class StudentCourse(models.Model):
